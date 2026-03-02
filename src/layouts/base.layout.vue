@@ -14,6 +14,7 @@ import type { ToolCategory } from '@/tools/tools.types';
 import { useToolStore } from '@/tools/tools.store';
 import { useTracker } from '@/modules/tracker/tracker.services';
 import CollapsibleToolMenu from '@/components/CollapsibleToolMenu.vue';
+import wxImagePath from '@/assets/wx.jpg';
 
 const themeVars = useThemeVars();
 const styleStore = useStyleStore();
@@ -41,10 +42,10 @@ const tools = computed<ToolCategory[]>(() => [
           <div class="title">
             IT - TOOLS
           </div>
-          <div class="divider" />
+          <!-- <div class="divider" />
           <div class="subtitle">
             {{ $t('home.subtitle') }}
-          </div>
+          </div> -->
         </div>
       </RouterLink>
 
@@ -61,13 +62,13 @@ const tools = computed<ToolCategory[]>(() => [
 
         <div class="footer">
           <div>
-            IT-Tools
+            <!-- IT-Tools -->
 
-            <c-link target="_blank" rel="noopener" :href="`https://github.com/CorentinTh/it-tools/tree/v${version}`">
+            <!-- <c-link target="_blank" rel="noopener" :href="`https://github.com/CorentinTh/it-tools/tree/v${version}`">
               v{{ version }}
-            </c-link>
+            </c-link> -->
 
-            <template v-if="commitSha && commitSha.length > 0">
+            <!-- <template v-if="commitSha && commitSha.length > 0">
               -
               <c-link
                 target="_blank"
@@ -77,14 +78,14 @@ const tools = computed<ToolCategory[]>(() => [
               >
                 {{ commitSha }}
               </c-link>
-            </template>
+            </template> -->
           </div>
-          <div>
+          <!-- <div>
             © {{ new Date().getFullYear() }}
             <c-link target="_blank" rel="noopener" href="https://corentin.tech?utm_source=it-tools&utm_medium=footer">
               Corentin Thomasset
             </c-link>
-          </div>
+          </div> -->
         </div>
       </div>
     </template>
@@ -120,11 +121,12 @@ const tools = computed<ToolCategory[]>(() => [
           <NavbarButtons v-if="!styleStore.isSmallScreen" />
         </div>
 
-        <c-tooltip position="bottom" :tooltip="$t('home.support')">
+        <c-tooltip position="bottom">
+          <template #tooltip>
+            <img :src="wxImagePath" alt="微信二维码" style="max-width: 200px;">
+          </template>
           <c-button
             round
-            href="https://www.buymeacoffee.com/cthmsst"
-            rel="noopener"
             target="_blank"
             class="support-button"
             :bordered="false"
