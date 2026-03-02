@@ -1,0 +1,52 @@
+# 工作流名称
+name: Auto Deploy to Tencent COS
+
+# 触发条件：提交代码到main分支时自动运行
+on:
+  push:
+    branches: [ main ] # 如果你用master分支，改成master
+
+jobs:
+  build-and-deploy:
+    # 运行环境：Ubuntu系统
+    runs-on: ubuntu-latest
+    steps:
+      # 步骤1：拉取GitHub仓库代码
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 步骤2：安装Node.js（匹配前端项目环境）
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20 # 主流版本，适配it-tools
+          cache: 'npm' # 缓存依赖，加速构建
+
+      # 步骤3：安装项目依赖
+      - name: Install Dependencies
+        run: npm install
+
+      # 步骤4：打包前端项目（生成dist目录）
+      - name: Build Project
+        run: npm run build
+
+      # 步骤5：部署到腾讯云COS（核心步骤）
+      - name: Deploy to Tencent COS
+        uses: zkqiang/tencent-cos-action@v0.1.0
+        with:
+          # 先清空COS旧文件，再上传新dist文件
+          args: delete -r -f / && upload -r ./dist/ /
+          secret_id: ${{ secrets.TENCENT_SECRET_ID }}
+          secret_key: ${{ secrets.TENCENT_SECRET_KEY }}
+          bucket: ${{ secrets.COS_BUCKET }}
+          region: ${{ secrets.COS_REGION }}
+
+      # 可选步骤：刷新CDN缓存（如果用了EdgeOne/CDN）
+      - name: Refresh CDN Cache
+        uses: tencentcloud/github-action-tccli@v1
+        with:
+          secret_id: ${{ secrets.TENCENT_SECRET_ID }}
+          secret_key: ${{ secrets.TENCENT_SECRET_KEY }}
+          region: ${{ secrets.COS_REGION }}
+          # 刷新你的域名缓存，替换成自己的域名
+          cmds: cdn RefreshCdnUrl --urls '["https://fasttool.top/*"]'
