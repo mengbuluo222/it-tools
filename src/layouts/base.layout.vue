@@ -67,6 +67,16 @@ const tools = computed<ToolCategory[]>(() => [
             <!-- <c-link target="_blank" rel="noopener" :href="`https://github.com/CorentinTh/it-tools/tree/v${version}`">
               v{{ version }}
             </c-link> -->
+            <!-- <c-link target="_blank" rel="noopener" :href="`https://github.com/CorentinTh/it-tools/tree/v${version}`">
+              {{ $t('home.subtitle') }}
+            </c-link> -->
+            <c-button
+              variant="text"
+              to="/privacyPolicy"
+              :aria-label="$t('home.privacyPolicy')"
+            >
+              {{ $t('home.privacyPolicy') }}
+            </c-button>
 
             <!-- <template v-if="commitSha && commitSha.length > 0">
               -
@@ -80,12 +90,12 @@ const tools = computed<ToolCategory[]>(() => [
               </c-link>
             </template> -->
           </div>
-          <!-- <div>
+          <div>
             © {{ new Date().getFullYear() }}
             <c-link target="_blank" rel="noopener" href="https://corentin.tech?utm_source=it-tools&utm_medium=footer">
               Corentin Thomasset
             </c-link>
-          </div> -->
+          </div>
         </div>
       </div>
     </template>

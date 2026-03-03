@@ -45,6 +45,62 @@ about:
 
     Y si encontró un error o algo no funciona como se esperaba, presente un reporte de error en el [issues section](https://github.com/CorentinTh/it-tools/issues/new/choose) en el repositorio de GitHub.
 
+privacyPolicy:
+  content: >
+    # Privacy Policy
+
+    Last updated: 2026-03-03
+
+    ## 1. Introduction
+
+    Welcome to the "Site",  This Privacy Policy explains how we collect, use, and protect your information when you visit our Site.
+
+    ## 2. Information We Collect
+
+    Our Site is a static tool website and does not require user registration or login. We collect minimal information:
+
+    - **Log Data**: When you visit our Site, our servers may automatically log standard data including your IP address, browser type, operating system, the pages you visit, and the time/date of your visit. This data is used solely for technical maintenance and to improve Site performance.
+
+    - **Cookies & Analytics**: We may use cookies and similar tracking technologies (e.g., Google Analytics) to analyze user behavior and improve the user experience. Google Analytics may collect anonymized data about your visit. You can disable cookies in your browser settings.
+
+    - **AdSense Ads**: Our Site displays ads from Google AdSense. Google may use cookies to serve personalized ads based on your browsing history. For more details, please review [Google's Privacy Policy](https://policies.google.com/privacy).
+
+    ## 3. How We Use Your Information
+
+    We use the collected information only for the following purposes:
+    - To operate, maintain, and improve our Site and tools
+
+    - To monitor and analyze usage trends and preferences
+
+    - To display relevant advertisements via Google AdSense
+    
+    - To comply with legal obligations
+
+    ## 4. Sharing Your Information
+
+    We do not sell, trade, or rent your personal information to third parties. We may share anonymized, aggregated data with trusted partners (such as Google Analytics and Google AdSense) for the purposes outlined in this policy.
+
+    ## 5. Data Security
+
+    We take reasonable technical and organizational measures to protect the limited data we collect from unauthorized access, disclosure, or misuse. However, no method of transmission over the Internet is 100% secure.
+
+    ## 6. Your Rights
+
+    You have the right to:
+    - Access information about the data we hold about you
+    - Request the deletion of any personal data we may have collected
+    - Opt out of non-essential cookies and tracking by adjusting your browser settings
+
+    ## 7. Changes to This Policy
+
+    We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page with a revised "Last updated" date.
+
+    ## 8. Contact Us
+
+    If you have any questions about this Privacy Policy, please contact us at:
+    15585491263
+   
+
 404:
   notFound: '404 Not Found'
   sorry: 'Lo sentimos, esta página no parece existir'
