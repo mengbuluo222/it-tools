@@ -8,6 +8,7 @@ import { storeToRefs } from 'pinia';
 import HeroGradient from '../assets/hero-gradient.svg?component';
 import MenuLayout from '../components/MenuLayout.vue';
 import NavbarButtons from '../components/NavbarButtons.vue';
+import Ads from '../components/Ads.vue';
 import { useStyleStore } from '@/stores/style.store';
 import { config } from '@/config';
 import type { ToolCategory } from '@/tools/tools.types';
@@ -70,6 +71,7 @@ const tools = computed<ToolCategory[]>(() => [
             <!-- <c-link target="_blank" rel="noopener" :href="`https://github.com/CorentinTh/it-tools/tree/v${version}`">
               {{ $t('home.subtitle') }}
             </c-link> -->
+            <Ads />
             <c-button
               variant="text"
               to="/privacyPolicy"
