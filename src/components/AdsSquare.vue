@@ -21,10 +21,10 @@ onMounted(() => {
 
 <style scoped lang="less">
 .ad-container{
-    width: 90%;
+    width: 100%;
     height: auto;
     background: #ddd;
     text-align: center;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 </style>

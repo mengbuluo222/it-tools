@@ -2,6 +2,8 @@
 import { useStorage } from '@vueuse/core';
 import { useThemeVars } from 'naive-ui';
 import { RouterLink, useRoute } from 'vue-router';
+
+// import Ads from '../components/Ads.vue';
 import MenuIconItem from './MenuIconItem.vue';
 import type { Tool, ToolCategory } from '@/tools/tools.types';
 
@@ -72,6 +74,7 @@ const themeVars = useThemeVars();
       </div>
     </n-collapse-transition>
   </div>
+  <!-- <Ads /> -->
 </template>
 
 <style scoped lang="less">

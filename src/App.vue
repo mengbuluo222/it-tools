@@ -4,6 +4,7 @@ import { NGlobalStyle, NMessageProvider, NNotificationProvider, darkTheme } from
 import { darkThemeOverrides, lightThemeOverrides } from './themes';
 import { layouts } from './layouts';
 import { useStyleStore } from './stores/style.store';
+import AdsHorizontal from './components/AdsHorizontal.vue';
 
 const route = useRoute();
 const layout = computed(() => route?.meta?.layout ?? layouts.base);
@@ -26,7 +27,10 @@ syncRef(
     <NMessageProvider placement="bottom">
       <NNotificationProvider placement="bottom-right">
         <component :is="layout">
-          <RouterView />
+          <div>
+            <RouterView />
+            <AdsHorizontal />
+          </div>
         </component>
       </NNotificationProvider>
     </NMessageProvider>
