@@ -23,7 +23,7 @@ onMounted(() => {
 .ad-container{
     width: 100%;
     height: auto;
-    background: #ddd;
+    // background: #ddd;
     text-align: center;
     margin: 20px auto;
 }
