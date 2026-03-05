@@ -39,3 +39,8 @@ declare module 'pdf-signature-reader' {
 
   export default verifySignature;
 }
+
+// Google AdSense 类型定义
+interface Window {
+  adsbygoogle?: any[];
+}
