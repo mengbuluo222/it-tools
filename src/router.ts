@@ -27,14 +27,14 @@ const router = createRouter({
       component: HomePage,
     },
     {
-      path: '/privacyPolicy',
-      name: 'privacyPolicy',
-      component: () => import('./pages/PrivacyPolicy.vue'),
-    },
-    {
       path: '/about',
       name: 'about',
       component: () => import('./pages/About.vue'),
+    },
+    {
+      path: '/privacyPolicy',
+      name: 'privacyPolicy',
+      component: () => import('./pages/PrivacyPolicy.vue'),
     },
     ...toolsRoutes,
     ...toolsRedirectRoutes,

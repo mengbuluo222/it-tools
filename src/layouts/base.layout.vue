@@ -18,7 +18,6 @@ import wxImagePath from '@/assets/wx.jpg';
 
 const themeVars = useThemeVars();
 const styleStore = useStyleStore();
-const version = config.app.version;
 const commitSha = config.app.lastCommitSha.slice(0, 7);
 
 const { tracker } = useTracker();
@@ -42,10 +41,10 @@ const tools = computed<ToolCategory[]>(() => [
           <div class="title">
             FASTTOOL
           </div>
-          <!-- <div class="divider" />
+          <div class="divider" />
           <div class="subtitle">
             {{ $t('home.subtitle') }}
-          </div> -->
+          </div>
         </div>
       </RouterLink>
 
@@ -62,15 +61,8 @@ const tools = computed<ToolCategory[]>(() => [
 
         <div class="footer">
           <div>
-            <!-- IT-Tools -->
+            <!-- FASTTool -->
 
-            <!-- <c-link target="_blank" rel="noopener" :href="`https://github.com/CorentinTh/it-tools/tree/v${version}`">
-              v{{ version }}
-            </c-link> -->
-            <!-- <c-link target="_blank" rel="noopener" :href="`https://github.com/CorentinTh/it-tools/tree/v${version}`">
-              {{ $t('home.subtitle') }}
-            </c-link> -->
-            <!-- <Ads /> -->
             <c-button
               variant="text"
               to="/privacyPolicy"
@@ -79,7 +71,7 @@ const tools = computed<ToolCategory[]>(() => [
               {{ $t('home.privacyPolicy') }}
             </c-button>
 
-            <!-- <template v-if="commitSha && commitSha.length > 0">
+            <template v-if="commitSha && commitSha.length > 0">
               -
               <c-link
                 target="_blank"
@@ -89,7 +81,7 @@ const tools = computed<ToolCategory[]>(() => [
               >
                 {{ commitSha }}
               </c-link>
-            </template> -->
+            </template>
           </div>
           <div>
             © {{ new Date().getFullYear() }}

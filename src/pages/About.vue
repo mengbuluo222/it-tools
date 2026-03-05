@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useHead } from '@vueuse/head';
 
-useHead({ title: 'About - FAST Tools' });
+useHead({ title: 'About - IT Tools' });
 </script>
 
 <template>
