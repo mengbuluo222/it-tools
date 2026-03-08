@@ -1,9 +1,3 @@
-<picture>
-    <source srcset="./.github/logo-dark.png" media="(prefers-color-scheme: light)">
-    <source srcset="./.github/logo-white.png" media="(prefers-color-scheme: dark)">
-    <img src="./.github/logo-dark.png" alt="logo">
-</picture>
-
 <p align="center">
 Useful tools for developer and people working in IT. <a href="https://fasttool.top">Try it!</a>
 </p>
